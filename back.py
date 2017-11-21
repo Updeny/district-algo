@@ -1,6 +1,8 @@
 '''back.py'''
 import csv
 
+# State to district
+STATE = 'MD'
 
 # Number of districts to partition
 NUM_DISTRICTS = 8
@@ -50,7 +52,7 @@ def read_data():
 	global total_population
 
 	# Open CSV file that has all MD ZIP codes
-	data = open('data_filtered.csv', 'rt')
+	data = open('Data/data-filtered/data_filtered_' + STATE + '.csv', 'rt')
 
 	# Read in all of the ZIP codes and their boundaries
 	for row in csv.reader(data):
